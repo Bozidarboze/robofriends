@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://jsonplaceholder.typicode.com/users")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((users) => this.setState({ robots: users }));
   }
@@ -35,7 +35,7 @@ class App extends Component {
         <SearchBox searchChange={this.onSearchChange} />
         <Scroll>
           <ErrorBoundry>
-            <CardList robots={filteredRobots} />;
+            <CardList robots={filteredRobots} />
           </ErrorBoundry>
         </Scroll>
       </div>
